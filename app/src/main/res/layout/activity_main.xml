@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bubbleNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/item_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/colorPrimaryDark"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_dashboard_white_24dp"
+            app:bt_shape="@drawable/ic_dashboard_white_24dp"
+            app:bt_title="Home"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="10dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+        android:id="@+id/item_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bt_active="true"
+        app:bt_colorActive="@color/colorPrimaryDark"
+        app:bt_colorInactive="@color/colorPrimary"
+        app:bt_icon="@drawable/ic_store_white_24dp"
+        app:bt_shape="@drawable/ic_store_white_24dp"
+        app:bt_title="Store"
+        app:bt_padding="10dp"
+        app:bt_titlePadding="10dp" />
+
+
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+    <TextView
+        android:id="@+id/text"
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="24sp"
+        android:textColor="#000"/>
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:backgroundColor="@color/colorPrimaryDark"
+        app:textColor="@color/white"
+        app:textSize="14sp"
+        app:iconSize="24dp"
+        app:indicatorColor="#2DFFFFFF"
+        app:indicatorRadius="10dp"
+        app:sideMargins="10dp"
+        app:itemPadding="10dp"
+        app:iconTint="#C8FFFFFF"
+        app:iconTintActive="#FFFFFF"
+        app:menu="@menu/menu_bottom"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
